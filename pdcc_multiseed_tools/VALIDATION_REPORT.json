@@ -1,0 +1,31 @@
+{
+  "syntax_compile": {
+    "pdcc_main.py": "PASS",
+    "dataloader.py": "PASS",
+    "src/pdcc_models.py": "PASS",
+    "src/pdcc_utils.py": "PASS",
+    "src/pdcc_train_run.py": "PASS",
+    "run_robustness_retrain.py": "PASS",
+    "run_clean_test_robustness.py": "PASS",
+    "run_mechanism_controls.py": "PASS",
+    "run_diagnostics_retrain.py": "PASS",
+    "run_complexity_table.py": "PASS",
+    "summarize_robustness_retrain.py": "PASS"
+  },
+  "runner_dry_run": {
+    "main_multiseed": "PASS",
+    "mechanism_controls": "PASS",
+    "clean_test_robustness": "PASS",
+    "diagnostics_cost": "PASS"
+  },
+  "checked_contract": [
+    "PDCC-MER is used as the method name and pdcc is used for code paths",
+    "new artifacts use the PDCC tag and PDCCModel class name",
+    "legacy OURS/DCCModel artifacts remain readable",
+    "each condition/seed has its own run_dir",
+    "Stage 1 expected models and pseudo-label pkl files are verified",
+    "Stage 2 expected checkpoint and metrics.json are verified",
+    "all condition runs retain --use_best and complete TPLR/PCRP/RCCR flags"
+  ],
+  "runtime_note": "Full training was not run in the local validation environment because PyTorch and dataset artifacts are unavailable."
+}
